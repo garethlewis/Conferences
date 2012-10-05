@@ -1,0 +1,40 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @agendas.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @agendas.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="agendas[Date]" class="fieldLabel">Date</label>
+            <input type="text" id="agendas[Date]" name="agendas[Date]" <%= placeholder("Date") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="agendas[Title]" class="fieldLabel">Title</label>
+            <input type="text" id="agendas[Title]" name="agendas[Title]" <%= placeholder("Title") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="agendas[Text]" class="fieldLabel">Text</label>
+            <input type="text" id="agendas[Text]" name="agendas[Text]" <%= placeholder("Text") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="agendas[Sessions]" class="fieldLabel">Sessions</label>
+            <input type="text" id="agendas[Sessions]" name="agendas[Sessions]" <%= placeholder("Sessions") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

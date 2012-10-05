@@ -1,0 +1,22 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @eventsponsors.name %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+  </div>
+
+  <div id="scrollable" data-role="content">
+    <ul data-role="listview">
+      <li>
+        <div class="itemValue"><img src="<%= @eventsponsors.image %>" /></div>
+      </li>
+                 
+      <li>
+        <div class="itemText"><%= @eventsponsors.text %></div>
+      </li>
+    </ul>
+  </div>
+
+</div>

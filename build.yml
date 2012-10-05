@@ -1,0 +1,28 @@
+sdkversion: "3.4.0"
+name: "AppForum2012"
+version: "1.0"
+vendor: "rhomobile"
+build: "debug"
+bbver: "4.6"
+applog: "rholog.txt"
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator5.0"
+  provisionprofile: 
+  codesignidentity: 
+  entitlements: 
+  BundleIdentifier: "com.rhomobile.appforum2012"
+  BundleURLScheme: "appforum2012"
+  emulatortarget: "ipad"
+wp:
+  productid: "f37d1a00-b86e-012f-d9ae-0024d76525bc"
+symbian:
+  uid: "0xe79650b0"
+android:
+  version: "4.0.3"
+extensions:
+  - json
+  - another-extension
+# app_type: "rhoelements"
+capabilities:
+  - non_motorola_device

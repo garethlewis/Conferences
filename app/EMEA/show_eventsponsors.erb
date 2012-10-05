@@ -1,0 +1,31 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @emea.name %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+  </div>
+
+      <div data-role="content">
+          <ul data-role="listview">
+            <% @eventsponsor.each do |sponsor| %>
+                <li>
+                  <div class="itemLabel">Name</div>
+                  <div class="itemValue"><%= sponsor.name %></div>
+                </li>
+            
+                <li>
+                  <div class="itemLabel">Image</div>
+                  <div class="itemValue"><img src="<%= sponsor.image %>" /></div>
+                </li>
+            
+                <li>
+                  <div class="itemLabel">Text</div>
+                  <div class="itemValue"><%= sponsor.text %></div>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+
+</div>

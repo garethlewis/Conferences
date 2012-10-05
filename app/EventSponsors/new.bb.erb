@@ -1,0 +1,33 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New EventSponsors</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @eventsponsors.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Name: </td>
+                <td class="itemValue"><input type="text" name="eventsponsors[name]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Image: </td>
+                <td class="itemValue"><input type="text" name="eventsponsors[image]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Text: </td>
+                <td class="itemValue"><input type="text" name="eventsponsors[text]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

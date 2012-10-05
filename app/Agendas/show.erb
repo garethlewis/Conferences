@@ -1,0 +1,25 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @agendas.Date %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @agendas.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+          <% @sessions.each do |session| %>
+          end
+            <li><%= @sessions['Time'] %>
+            
+            <p style="white-space:normal"><%= @sessions['Text'] %></p>
+            </li>
+          <% end %>
+    </ul>
+  </div>
+
+</div>
